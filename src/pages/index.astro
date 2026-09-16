@@ -1,17 +1,84 @@
 ---
-
+const name = "Takumi Ishihara";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{name}</title>
+  </head>
+
+  <style>
+	body {
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 1.6;
+	}
+	main {
+		max-width: 760px;
+		margin: 0 auto;
+		padding: 64px 24px;
+	}
+	header {
+		margin-bottom: 64px;
+	}
+	section {
+		margin-bottom: 48px;
+	}
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 8px;
+	}
+	h2 {
+		font-size: 1.25rem;
+		margin-bottom: 16px;
+	}
+	a {
+		color: inherit;
+	}
+  </style>
+
+  <body>
+    <main>
+      <header>
+        <h1>{name}</h1>
+        <p>
+          Project Assistant Professor at Keio University<br />
+          Ph.D. Student, Graduate School of Media and Governance
+        </p>
+      </header>
+
+      <section>
+        <h2>About</h2>
+        <p>
+          I am a researcher working on computer networks,
+          mobile networks, and edge computing.
+        </p>
+      </section>
+
+      <section>
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Computer Networks</li>
+          <li>Mobile Networks</li>
+          <li>Edge Computing / MEC</li>
+          <li>5G / 6G</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>News</h2>
+        <ul>
+          <li>2026.10 — Presentation at IEEE WiMob 2026</li>
+          <li>2026.08 — Presented ARENA-PAC at ACM SIGCOMM 2026</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Publications</h2>
+        <p>Coming soon.</p>
+      </section>
+    </main>
+  </body>
 </html>
