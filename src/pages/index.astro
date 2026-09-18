@@ -2,6 +2,7 @@
 const name = "Takumi ISHIHARA";
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,15 +17,16 @@ const name = "Takumi ISHIHARA";
   <body>
     <main>
       <header>
-        <h1>Takumi ISHIHARA</h1>
-        <p>石原 匠</p>
+        <h1>Takumi Ishihara</h1>
+        <p class="name-ja">石原 匠</p>
 
-        <p>
+        <p class="affiliation">
           Project Assistant Professor, Keio University<br />
-          Ph.D. Student, Graduate School of Media and Governance
+          Ph.D. Student, Graduate School of Media and Governance,
+          Keio University
         </p>
 
-        <p>
+        <p class="interests">
           Computer Networks · Mobile Networks · Edge Computing
         </p>
 
@@ -38,27 +40,245 @@ const name = "Takumi ISHIHARA";
 
       <section id="about">
         <h2>About</h2>
+
+        <p>
+          I am a Project Assistant Professor at Keio University and a
+          Ph.D. student at the Graduate School of Media and Governance,
+          Keio University.
+        </p>
+
+        <p>
+          My research focuses on computer networks, particularly mobile
+          networks and edge computing. I am interested in designing network
+          architectures that integrate mobile networks and computing
+          infrastructure for 5G and beyond.
+        </p>
       </section>
 
       <section id="research">
         <h2>Research</h2>
+
+        <div class="research-item">
+          <h3>Mobile &amp; Edge Computing</h3>
+          <p>
+            Network architectures that integrate mobile networks and
+            edge computing environments, including Multi-access Edge
+            Computing (MEC).
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>5G / 6G Networks</h3>
+          <p>
+            User-plane architectures, network control, and resource
+            placement for current and future mobile networks.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Geo-distributed Networks</h3>
+          <p>
+            Design, operation, and measurement of geo-distributed
+            network infrastructure.
+          </p>
+        </div>
       </section>
 
       <section id="publications">
         <h2>Publications</h2>
 
         <h3>Journal Papers</h3>
+        <p class="empty">To be added.</p>
 
         <h3>International Conference Papers</h3>
 
+        <ol class="publications">
+          <li>
+            <strong>Takumi Ishihara</strong>, Tomoaki Kanaya,
+            Noriaki Yamada, Takashi Nakamura, Keiichi Shima,
+            and Keisuke Uehara,
+            “Joint U-Plane and C-Plane Evaluation of Distributed UPF
+            Deployment: Trade-offs and Practical Guidelines for 5G and
+            Beyond MEC,”
+            <em>
+              2026 IEEE 22nd International Conference on Wireless and
+              Mobile Computing, Networking and Communications (WiMob)
+            </em>,
+            Avignon, France, October 2026.
+          </li>
+        </ol>
+
         <h3>Posters &amp; Demos</h3>
 
+        <ol class="publications">
+          <li>
+            <strong>Takumi Ishihara</strong>, Hirochika Asai,
+            and Jun Murai,
+            “ARENA-PAC: A Geo-Distributed Multi-Layer REN with
+            Anycast-Based Routing Observation,”
+            <em>ACM SIGCOMM 2026 Posters and Demos</em>,
+            Denver, Colorado, USA, August 2026.
+          </li>
+        </ol>
+
         <h3>Domestic Conference Papers</h3>
+        <p class="empty">To be added.</p>
       </section>
 
       <section id="contact">
         <h2>Contact</h2>
+
+        <p>
+          Takumi Ishihara<br />
+          Keio University
+        </p>
+
+        <p>
+          <a href="https://github.com/takuan517">GitHub</a>
+        </p>
       </section>
+
+      <footer>
+        <p>© 2026 Takumi Ishihara</p>
+      </footer>
     </main>
+
+    <style>
+      :global(*) {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #fff;
+        color: #222;
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      main {
+        width: min(760px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 72px 0 40px;
+      }
+
+      header {
+        margin-bottom: 72px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .name-ja {
+        margin: 0 0 24px;
+        color: #666;
+      }
+
+      .affiliation {
+        margin: 0 0 16px;
+      }
+
+      .interests {
+        color: #555;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 28px;
+      }
+
+      a {
+        color: #222;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+
+      section {
+        margin-bottom: 64px;
+      }
+
+      h2 {
+        margin: 0 0 24px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
+
+      h3 {
+        margin: 32px 0 8px;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      .research-item {
+        margin-bottom: 28px;
+      }
+
+      .research-item h3 {
+        margin-bottom: 4px;
+      }
+
+      .publications {
+        padding-left: 24px;
+      }
+
+      .publications li {
+        margin-bottom: 20px;
+        padding-left: 6px;
+      }
+
+      .empty {
+        color: #888;
+      }
+
+      footer {
+        margin-top: 80px;
+        padding-top: 24px;
+        border-top: 1px solid #ddd;
+        color: #777;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 600px) {
+        main {
+          width: min(100% - 32px, 760px);
+          padding-top: 40px;
+        }
+
+        header {
+          margin-bottom: 56px;
+        }
+
+        section {
+          margin-bottom: 48px;
+        }
+      }
+    </style>
   </body>
 </html>
