@@ -1,8 +1,9 @@
 ---
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -10,81 +11,122 @@
       name="description"
       content="Takumi Ishihara — Researcher in computer networks, mobile networks, and edge computing."
     />
-    <title>Takumi ISHIHARA</title>
+    <title>Takumi Ishihara</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('portfolio-theme');
+        document.documentElement.dataset.theme = saved === 'dark' || saved === 'light'
+          ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch {}
+    </script>
   </head>
 
   <body>
-    <main>
-      <header>
-        <h1>Takumi ISHIHARA / 石原 匠</h1>
-
-        <ul class="profile">
-          <li>Researcher / engineer in computer networking</li>
-          <li>
-            Research Topics: Mobile Networks, Edge Computing, 5G / 6G Networks,
-            Geo-distributed Networks
-          </li>
-          <li>
-            Project Assistant Professor, Keio University
-          </li>
-          <li>
-            Ph.D. Student, Graduate School of Media and Governance,
-            Keio University
-          </li>
-        </ul>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="navbar">
+      <div class="nav-inner">
+        <a class="brand" href="#about">Takumi Ishihara</a>
+        <div class="nav-controls">
+          <nav id="navigation" aria-label="Main navigation">
+            <a class="active" href="#about" aria-current="location">about</a>
+            <a href="#research">research</a>
+            <a href="#publications">publications</a>
+            <a href="#presentations">presentations</a>
+            <a href="#awards">awards</a>
+            <a href="#contact">contact</a>
+          </nav>
+          <button class="theme-toggle" aria-label="Switch to dark mode" title="Switch theme">
+            <svg class="moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" /></svg>
+            <svg class="sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          </button>
+          <button class="menu-toggle" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <main id="main-content">
+      <header class="profile-header" id="about">
+        <h1>Takumi Ishihara <span class="name-divider">/</span> <span class="name-ja" lang="ja">石原 匠</span></h1>
+        <p class="affiliation">Project Assistant Professor at <a href="https://www.keio.ac.jp/en/">Keio University</a></p>
+        <p class="interests">Computer Networks <span>·</span> Mobile Networks <span>·</span> Edge Computing</p>
       </header>
 
-      <section>
-        <h2>Mail:</h2>
-        <ul>
-          <li>takuan (at) sfc.wide.ad.jp</li>
-          <li>
-            Other: takuan (at) keio.jp, takuan (at) sfc.keio.ac.jp
-          </li>
-        </ul>
+      <section class="biography" aria-label="About">
+
+        <p>
+          I am a researcher / engineer in computer networking, a
+          Project Assistant Professor at Keio University, and a
+          Ph.D. student at the Graduate School of Media and Governance,
+          Keio University.
+        </p>
+
+        <p>
+          My research focuses on computer networks, particularly mobile
+          networks and edge computing. I am interested in designing network
+          architectures that integrate mobile networks and computing
+          infrastructure for 5G and beyond.
+        </p>
+        <p class="links">
+          <a
+            href="https://scholar.google.com/citations?user=YNlbPRQAAAAJ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Scholar
+          </a>
+          <span>·</span>
+          <a
+            href="https://orcid.org/0009-0001-7566-4157"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ORCID
+          </a>
+          <span>·</span>
+          <a
+            href="https://github.com/takuan517"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
+
       </section>
 
-      <section>
-        <h2>Link:</h2>
-        <ul>
-          <li>
-            Google Scholar:
-            <a
-              href="https://scholar.google.com/citations?user=YNlbPRQAAAAJ"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Profile
-            </a>
-          </li>
+      <section id="research">
+        <h2>research</h2>
 
-          <li>
-            ORCID:
-            <a
-              href="https://orcid.org/0009-0001-7566-4157"
-              target="_blank"
-              rel="noreferrer"
-            >
-              0009-0001-7566-4157
-            </a>
-          </li>
+        <div class="research-item">
+          <h3>Mobile &amp; Edge Computing</h3>
+          <p>
+            Network architectures that integrate mobile networks and
+            edge computing environments, including Multi-access Edge
+            Computing (MEC).
+          </p>
+        </div>
 
-          <li>
-            GitHub:
-            <a
-              href="https://github.com/takuan517"
-              target="_blank"
-              rel="noreferrer"
-            >
-              takuan517
-            </a>
-          </li>
-        </ul>
+        <div class="research-item">
+          <h3>5G / 6G Networks</h3>
+          <p>
+            User-plane architectures, network control, and resource
+            placement for current and future mobile networks.
+          </p>
+        </div>
+
+        <div class="research-item">
+          <h3>Geo-distributed Networks</h3>
+          <p>
+            Design, operation, and measurement of geo-distributed
+            network infrastructure.
+          </p>
+        </div>
       </section>
-
 
       <section id="work">
-        <h2>Work:</h2>
+        <h2>work</h2>
 
         <ul>
           <li>
@@ -120,7 +162,7 @@
       </section>
 
       <section id="teaching">
-        <h2>Teaching:</h2>
+        <h2>teaching</h2>
 
         <ul>
           <li>
@@ -163,7 +205,7 @@
       </section>
 
       <section id="network-work">
-        <h2>Other network-related work:</h2>
+        <h2>other network-related work</h2>
 
         <ul>
           <li>
@@ -197,7 +239,7 @@
       </section>
 
       <section id="publications">
-        <h2>Publications:</h2>
+        <h2>publications</h2>
 
         <h3>International Conference / Workshop:</h3>
 
@@ -323,7 +365,7 @@
       </section>
 
       <section id="presentations">
-        <h2>Presentations:</h2>
+        <h2>presentations</h2>
 
         <ol class="publications">
           <li>
@@ -351,9 +393,9 @@
       </section>
 
       <section id="awards">
-        <h2>Awards:</h2>
+        <h2>awards</h2>
 
-        <ul>
+        <ul class="awards">
           <li>
             <strong>若手研究奨励賞</strong>,
             電子情報通信学会 ネットワークシステム研究会 (NS),
@@ -369,7 +411,7 @@
       </section>
 
       <section id="degree">
-        <h2>Degree:</h2>
+        <h2>degree</h2>
 
         <ul>
           <li>
@@ -386,123 +428,159 @@
         </ul>
       </section>
 
-      <footer>
-        <p>© 2026 Takumi Ishihara</p>
-      </footer>
+      <section id="contact">
+        <h2>contact</h2>
+
+        <p>
+          Takumi Ishihara<br />
+          Keio University<br />
+          <a href="mailto:takuan@sfc.wide.ad.jp">takuan (at) sfc.wide.ad.jp</a><br />
+          Other: <a href="mailto:takuan@keio.jp">takuan (at) keio.jp</a>,
+          <a href="mailto:takuan@sfc.keio.ac.jp">takuan (at) sfc.keio.ac.jp</a>
+        </p>
+      </section>
+
     </main>
+    <footer><div class="footer-inner">© 2026 Takumi Ishihara. <span>Keio University</span></div></footer>
+    <a class="back-to-top" href="#about" aria-label="Back to top">↑</a>
+    <script>
+      const themeButton = document.querySelector<HTMLButtonElement>('.theme-toggle');
+      const updateThemeLabel = () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        themeButton?.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
+      };
+      updateThemeLabel();
+      themeButton?.addEventListener('click', () => {
+        const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try { localStorage.setItem('portfolio-theme', theme); } catch {}
+        updateThemeLabel();
+      });
+      const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const navigation = document.querySelector('#navigation');
+      const closeMenu = () => {
+        navigation?.classList.remove('open');
+        menuButton?.setAttribute('aria-expanded', 'false');
+        menuButton?.setAttribute('aria-label', 'Open navigation');
+      };
+      menuButton?.addEventListener('click', () => {
+        const open = navigation?.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(open));
+        menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      });
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+      navigation?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      const navLinks = [...document.querySelectorAll<HTMLAnchorElement>('#navigation a')];
+      const targets = navLinks.map(link => document.querySelector(link.hash)).filter((el): el is Element => Boolean(el));
+      const updateNavigation = () => {
+        const current = [...targets].reverse().find(target => target.getBoundingClientRect().top <= 140) ?? targets[0];
+        navLinks.forEach(link => {
+          const active = link.hash === `#${current?.id}`;
+          link.classList.toggle('active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+        document.querySelector('.back-to-top')?.classList.toggle('visible', scrollY > 350);
+      };
+      window.addEventListener('scroll', updateNavigation, { passive: true });
+      updateNavigation();
+    </script>
 
     <style>
-      :global(*) {
-        box-sizing: border-box;
+      :global(*) { box-sizing: border-box; }
+      :global(:root) {
+        color-scheme: light;
+        --background: #fff;
+        --text: #1a1a1a;
+        --muted: #6c757d;
+        --accent: #b509ac;
+        --divider: #0000001a;
       }
-
-      body {
-        margin: 0;
-        background: #fff;
-        color: #222;
-        font-family:
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          "Helvetica Neue",
-          Arial,
-          "Noto Sans JP",
-          sans-serif;
-        font-size: 15px;
-        line-height: 1.65;
+      :global(html[data-theme="dark"]) {
+        color-scheme: dark;
+        --background: #1c1c1d;
+        --text: #e0e0e0;
+        --muted: #aaa;
+        --accent: #2698ba;
+        --divider: #424246;
       }
-
-      main {
-        width: min(900px, calc(100% - 40px));
-        margin: 0 auto;
-        padding: 48px 0 36px;
+      html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+      body { margin: 0; background: var(--background); color: var(--text); font-family: "Helvetica Neue", Arial, "Noto Sans JP", sans-serif; font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+      a { color: var(--accent); text-decoration: none; text-underline-offset: 3px; }
+      a:hover { text-decoration: underline; }
+      a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+      .navbar { position: fixed; inset: 0 0 auto; z-index: 20; height: 57px; background: var(--background); border-bottom: 1px solid var(--divider); }
+      .nav-inner, main, .footer-inner { width: 100%; max-width: 930px; margin: 0 auto; padding-inline: 16px; }
+      .nav-inner, .nav-controls, nav { display: flex; align-items: center; }
+      .nav-inner { height: 100%; justify-content: space-between; gap: 16px; }
+      .brand { color: var(--text); font-weight: 700; font-size: 18px; white-space: nowrap; }
+      .brand:hover { text-decoration: none; }
+      .nav-controls { gap: 12px; }
+      nav { gap: 20px; }
+      nav a { color: var(--text); font-size: 14px; }
+      nav a.active { color: var(--accent); font-weight: 700; }
+      button { display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--text); width: 32px; height: 36px; padding: 0; cursor: pointer; }
+      .menu-toggle, .sun { display: none; }
+      :global([data-theme="dark"]) .moon { display: none; }
+      :global([data-theme="dark"]) .sun { display: block; }
+      main { padding-top: 93px; padding-bottom: 48px; min-height: calc(100vh - 57px); }
+      .profile-header { margin-bottom: 28px; scroll-margin-top: 90px; }
+      h1 { font-size: 32px; line-height: 1.3; font-weight: 700; margin: 0 0 8px; letter-spacing: -.7px; }
+      .name-divider { margin-inline: 5px; font-weight: 400; }
+      .name-ja { letter-spacing: 0; }
+      .affiliation { margin: 0 0 3px; color: var(--muted); }
+      .interests { margin: 0; font-size: 15px; color: var(--muted); }
+      .interests span { padding-inline: 5px; }
+      p { margin: 0 0 16px; }
+      section { margin-bottom: 42px; scroll-margin-top: 82px; }
+      .biography { margin-bottom: 36px; }
+      .biography p { max-width: 850px; }
+      .links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; margin-bottom: 0; }
+      .links a { font-size: 15px; font-weight: 500; }
+      .links span { color: var(--muted); }
+      h2 { font-size: 26px; font-weight: 400; line-height: 1.4; margin: 0 0 20px; padding-bottom: 5px; border-bottom: 1px solid var(--divider); letter-spacing: -.4px; }
+      h3 { margin: 28px 0 12px; font-size: 17px; font-weight: 600; }
+      .research-item { display: grid; grid-template-columns: 240px 1fr; column-gap: 28px; margin-bottom: 15px; }
+      .research-item h3 { font-size: 16px; margin: 0; }
+      .research-item p { margin: 0; color: var(--muted); font-size: 15px; }
+      .publications { padding-left: 24px; margin: 12px 0 28px; }
+      .publications li { padding-left: 7px; margin-bottom: 22px; line-height: 1.75; }
+      .publications li::marker { color: var(--muted); font-size: 13px; }
+      .publications strong { font-weight: 600; }
+      .publications em { color: var(--muted); }
+      .awards { list-style: none; padding: 0; }
+      .awards li { padding-block: 12px; border-bottom: 1px solid var(--divider); }
+      #contact { margin-bottom: 0; }
+      footer { background: #1c1c1d; color: #e0e0e0; font-size: 13px; padding: 18px 0; }
+      .footer-inner { text-align: center; }
+      footer span { color: #aaa; margin-left: 8px; }
+      .back-to-top { position: fixed; bottom: 25px; right: 25px; border-radius: 4px; background: var(--text); color: var(--background); width: 34px; height: 34px; display: grid; place-items: center; opacity: 0; visibility: hidden; transition: opacity .15s; }
+      .back-to-top.visible { opacity: .75; visibility: visible; }
+      .skip-link { position: fixed; top: -100px; left: 16px; z-index: 30; background: var(--background); padding: 8px 16px; }
+      .skip-link:focus { top: 8px; }
+      @media (max-width: 800px) {
+        .menu-toggle { display: inline-flex; }
+        nav { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--background); padding: 12px 24px 20px; border-bottom: 1px solid var(--divider); align-items: stretch; gap: 0; }
+        nav.open { display: flex; flex-direction: column; }
+        nav a { padding: 9px 0; }
+        .nav-controls { gap: 8px; }
       }
-
-      header {
-        margin-bottom: 30px;
+      @media (max-width: 575px) {
+        .nav-inner, main, .footer-inner { padding-inline: 22px; }
+        main { padding-top: 85px; }
+        h1 { font-size: 29px; }
+        .name-divider { display: none; }
+        .name-ja { display: block; font-size: 23px; margin-top: 5px; }
+        .affiliation { font-size: 15px; margin-top: 12px; }
+        .interests { font-size: 13px; margin-top: 8px; }
+        .interests span { padding-inline: 1px; }
+        h2 { font-size: 24px; }
+        .research-item { grid-template-columns: 1fr; gap: 4px; margin-bottom: 20px; }
+        .publications { padding-left: 18px; font-size: 15px; }
+        .publications li { padding-left: 3px; }
+        footer span { display: block; margin: 2px 0 0; }
       }
-
-      h1 {
-        margin: 0 0 14px;
-        font-size: 1.4rem;
-        font-weight: 600;
-      }
-
-      h2 {
-        margin: 30px 0 8px;
-        padding: 0;
-        border: 0;
-        font-size: 1rem;
-        font-weight: 600;
-      }
-
-      h3 {
-        margin: 22px 0 8px;
-        font-size: 0.95rem;
-        font-weight: 600;
-      }
-
-      p {
-        margin: 0 0 10px;
-      }
-
-      ul,
-      ol {
-        margin-top: 6px;
-        margin-bottom: 10px;
-        padding-left: 26px;
-      }
-
-      li {
-        margin-bottom: 5px;
-      }
-
-      .profile {
-        margin-top: 0;
-      }
-
-      a {
-        color: #0645ad;
-        text-decoration: underline;
-        text-underline-offset: 2px;
-      }
-
-      a:hover {
-        text-decoration-thickness: 2px;
-      }
-
-      .publications li {
-        margin-bottom: 14px;
-        padding-left: 4px;
-      }
-
-      section {
-        margin: 0;
-      }
-
-      footer {
-        margin-top: 40px;
-        padding-top: 12px;
-        border-top: 1px solid #ddd;
-        color: #666;
-        font-size: 0.85rem;
-      }
-
-      @media (max-width: 600px) {
-        main {
-          width: calc(100% - 32px);
-          padding-top: 32px;
-        }
-
-        h1 {
-          font-size: 1.25rem;
-        }
-
-        ul,
-        ol {
-          padding-left: 22px;
-        }
-      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .back-to-top { transition: none; } }
     </style>
   </body>
 </html>
